@@ -4,6 +4,10 @@ from src.treeRepository import *
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET'])
+def base():  # put application's code here
+    return "saas api"
+
 @app.route('/export', methods=['POST'])
 def export():  # put application's code here
     return export_model()
